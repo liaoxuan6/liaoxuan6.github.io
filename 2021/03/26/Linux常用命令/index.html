@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Linux常用命令"><meta name="keywords" content="linux"><meta name="author" content="liaoxuan"><meta name="copyright" content="liaoxuan"><title>Linux常用命令 | lx's blog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  hexoVersion: '5.4.0'
+} </script><meta name="generator" content="Hexo 5.4.0"></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF"><span class="toc-number">1.</span> <span class="toc-text">系统信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%85%B3%E6%9C%BA%E3%80%81%E9%87%8D%E5%90%AF%E3%80%81%E7%99%BB%E5%87%BA"><span class="toc-number">2.</span> <span class="toc-text">系统的关机、重启、登出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95"><span class="toc-number">3.</span> <span class="toc-text">文件和目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E6%93%8D%E4%BD%9C"><span class="toc-number">4.</span> <span class="toc-text">用户操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B"><span class="toc-number">5.</span> <span class="toc-text">进程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vi%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text">vi编辑器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1"><span class="toc-number">7.</span> <span class="toc-text">网络通信</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D450%2C600/sign=99a1e582fb039245a1e0e90bb2a488f4/9a504fc2d5628535bfb2c16e97ef76c6a7ef632a.jpg"></div><div class="author-info__name text-center">liaoxuan</div><div class="author-info__description text-center"></div><div class="follow-button"><a target="_blank" rel="noopener" href="https://github.com/liaoxuan6">Follow me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">3</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">2</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">友链</div><a class="author-info-links__name text-center" href="panlianghnu.github.io">panliang</a><a class="author-info-links__name text-center" href="zichao-xie.github.io">ZichaoXie</a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">lx's blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/me">About me</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">Linux常用命令</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-03-26</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h2 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h2><p>arch / uname -m显示机器的处理器架构</p>
+<p>uname -r 显示正在使用的内核版本</p>
+<p>dmidecode -q 显示硬件系统部件</p>
+<p>cat</p>
+<ul>
+<li>/proc/cpuinfo 显示cpu信息</li>
+<li>/proc/meminfo 显示内存使用</li>
+<li>/proc/interrupts 显示中断</li>
+<li>/proc/swaps 显示哪些swap被使用</li>
+<li>/proc/version 显示内核版本</li>
+<li>/proc/net/dev 显示网络适配器及统计</li>
+<li>/proc/mounts 显示已加载的文件系统</li>
+</ul>
+<p>lsusb -tv 显示USB设备</p>
+<h2 id="系统的关机、重启、登出"><a href="#系统的关机、重启、登出" class="headerlink" title="系统的关机、重启、登出"></a>系统的关机、重启、登出</h2><p>shutdown </p>
+<ul>
+<li>-h now </li>
+<li>-h hours:minutes &amp;  按预定时间关闭系统</li>
+<li>-c 取消按预定时间关闭系统</li>
+<li>-r now 重启</li>
+</ul>
+<p>reboot 重启</p>
+<p>logout 注销</p>
+<p>init 0 关闭系统</p>
+<p>telinit 0 关闭系统</p>
+<h2 id="文件和目录"><a href="#文件和目录" class="headerlink" title="文件和目录"></a>文件和目录</h2><p>cd 进入个人的主目录</p>
+<ul>
+<li>“路径” ：进入指定的目录</li>
+<li>.. 返回上一级目录</li>
+<li>../.. 返回上两级目录</li>
+<li>~ 进入个人的主目录</li>
+<li>-返回上次所在的目录</li>
+</ul>
+<p>pwd 显示工作路径</p>
+<p>ls [参数] [目录] 用于显示文件或目录</p>
+<ul>
+<li>-a 显示所有文件及目录（.开头的隐藏文件也会列出）</li>
+<li>-l 除文件名称外，还将文件形态、权限、拥有者、文件大小等信息详细列出</li>
+<li>-r 将文件以相反次序显示</li>
+<li>-t 将文件按建立时间先后次序列出</li>
+<li>-A 同 -a 但不列出当前目录和上级目录</li>
+<li>-F 在列出的文件名称后加一符号；例如可执行文件加”.” 目录加“/“</li>
+</ul>
+<p>tree 显示文件和目录由根目录开始的树形结构</p>
+<p> mkdir dirName 创建一个名为“dirName”的子目录</p>
+<ul>
+<li>-p dirName 可为多级目录，该参数确保目录名称存在，不存在的就建一个</li>
+</ul>
+<p>rm [参数] [name]用于删除文件或目录</p>
+<ul>
+<li>-i 删除前逐一询问确认</li>
+<li>-f 即使原文件属性是只读，也直接删除，无需逐一确认</li>
+<li>-r 将目录及之下的文件逐一删除</li>
+<li>rm -r * 删除当前目录下所有的文件及目录</li>
+<li>文件一旦通过rm命令删除，无法恢复，慎用。</li>
+</ul>
+<p>mv [options] source dest 为文件或目录改名、或将文件或目录移到其他位置</p>
+<p>cp [options] source dest 复制文件或目录</p>
+<p>touch 修改文件或者目录的时间属性，包括存取时间和更改时间。若文件不存在，系统会建立一个新的文件</p>
+<p>find path -option 用来在指定目录下查找文件。任何位于参数之前的字符串都将被视为欲查找的目录名。如果使用该命令时，不设置任何参数，则 find  命令将在当前目录下查找子目录与文件。并且将查找到的子目录和文件全部进行显示</p>
+<p>tar [options] [file] 用来压缩和解压文件。tar本身不具有压缩功能。他是调用压缩功能实现的 </p>
+<ul>
+<li>-A 新增压缩文件到已存在的压缩</li>
+<li>-c 建立新的压缩文件</li>
+<li>-d 记录文件的差别</li>
+<li>-r 添加文件到已经压缩的文件</li>
+<li>-u 添加改变了和现有的文件到已经存在的压缩文件</li>
+<li>-x 从压缩的文件中提取文件</li>
+<li>-t 显示压缩文件的内容</li>
+<li>-z 支持gzip解压文件</li>
+<li>-j 支持bzip2解压文件</li>
+<li>-Z 支持compress解压文件</li>
+<li>-v 显示操作过程</li>
+<li>-k 保留原有文件不覆盖</li>
+<li>-m 保留文件不被覆盖</li>
+<li>-W 确认压缩文件的正确性</li>
+<li>-f 指定压缩文件</li>
+</ul>
+<h2 id="用户操作"><a href="#用户操作" class="headerlink" title="用户操作"></a>用户操作</h2><p>Linux用户在操作系统可以进行日常管理和维护，涉及到的相关配置文件保存在 /etc/</p>
+<p>Su：切换用户命令</p>
+<p>Sudo：一系统管理员的身份执行命令</p>
+<p>Passwd：用于修改用户的密码</p>
+<p>adduser：用于创建新用户，同时会创建该用户的组，默认用户a属于主组a，还会创建用户的默认home目录等信息</p>
+<p>deluser：用于删除用户，删除用户后home目录并不会主动删除，需要手动再删除</p>
+<h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><p>Ps：显示瞬间进程的动态</p>
+<p>Kill： 杀死一些特定的进程</p>
+<h2 id="vi编辑器"><a href="#vi编辑器" class="headerlink" title="vi编辑器"></a>vi编辑器</h2><p>首先用vi命令打开一个文件</p>
+<p>末行模式命令：</p>
+<ul>
+<li><p>:n,m w path/filename 保存指定范围文档（ n表开始行，m表结束行）</p>
+</li>
+<li><p>:q! 对文件做过修改后，强制退出</p>
+</li>
+<li><p>:q 没有对文件做过修改退出</p>
+</li>
+<li><p>Wq或x 保存退出</p>
+</li>
+<li><p>dd 删除光标所在行</p>
+</li>
+<li><p>: set number 显示行号</p>
+</li>
+<li><p>: n 跳转到n行</p>
+</li>
+<li><p>: s 替换字符串 : s/test/test2/g /g全局替换 /也可以用%代替</p>
+</li>
+<li><p>/ 查找字符串</p>
+</li>
+</ul>
+<h2 id="网络通信"><a href="#网络通信" class="headerlink" title="网络通信"></a>网络通信</h2><p>Arp：网络地址显示及控制</p>
+<p>ftp：文件传输</p>
+<p>Lftp：文件传输</p>
+<p>Mail：发送/接收电子邮件</p>
+<p>Mesg：允许或拒绝其他用户向自己所用的终端发送信息</p>
+<p>Mutt E-mail 管理程序</p>
+<p>Ncftp ：文件传输</p>
+<p>Netstat：显示网络连接.路由表和网络接口信息</p>
+<p>Pine：收发电子邮件，浏览新闻组</p>
+<p>Ping：用于查看网络是否连接通畅</p>
+<p>Ssh：安全模式下远程登陆</p>
+<p>Telnet：远程登录</p>
+<p>Traceroute：显示到达某一主机所经由的路径及所使用的时间。</p>
+<p>Wget：从网路上自动下载文件</p>
+<p>参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/luansj/article/details/97272672/">Linux常用命令大全</a></p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">liaoxuan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://liaoxuan6.github.io/2021/03/26/Linux常用命令/">http://liaoxuan6.github.io/2021/03/26/Linux常用命令/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/linux/">linux</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2021/03/24/first-blog/"><span>first blog</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2021 By liaoxuan</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.0"></script><script src="/js/fancybox.js?version=1.9.0"></script><script src="/js/sidebar.js?version=1.9.0"></script><script src="/js/copy.js?version=1.9.0"></script><script src="/js/fireworks.js?version=1.9.0"></script><script src="/js/transition.js?version=1.9.0"></script><script src="/js/scroll.js?version=1.9.0"></script><script src="/js/head.js?version=1.9.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>
